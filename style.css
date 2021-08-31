@@ -17,6 +17,13 @@ body {
   justify-content: center;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .quote-container {
   width: auto;
   max-width: 900px;
@@ -90,6 +97,18 @@ button:active {
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
+}
+
+/* Error Message*/
+.error-message {
+  display: none;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.error-message.visible {
+  display: block;
 }
 
 @keyframes spin {
