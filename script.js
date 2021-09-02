@@ -16,6 +16,11 @@ function tellMe(joke) {
   });
 }
 
+// Disable/Enable Button
+function toggleButton() {
+  button.disabled = !button.disabled;
+}
+
 // Get Jokes from Joke API
 async function getJokes() {
   let joke = '';
@@ -30,11 +35,15 @@ async function getJokes() {
       // If joke's type is "single"
       joke = data.joke;
     }
+    // Text-to-Speech
     tellMe(joke);
+    // Disable Button
+    toggleButton();
   } catch (error) {
     // Catch Errors Here
-    console.log('whoops', error);
   }
 }
 
-getJokes();
+// Event Listeners
+button.addEventListener('click', getJokes);
+audioElement.addEventListener('ended', toggleButton);
