@@ -23,11 +23,14 @@ let countCallsToAPI = 0;
 // Get Quote From API
 async function getQuoteFromAPI() {
   showLoadingSpinner();
-  // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-  const proxyUrl = 'https://guarded-peak-77488.herokuapp.com/'
+  const proxyUrl1 = 'https://cors-anywhere.herokuapp.com/';
+  const proxyUrl2 = 'https://guarded-peak-77488.herokuapp.com/';
   const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
   try {
-    const response = await fetch(proxyUrl + apiUrl);
+    let response = await fetch(proxyUrl1 + apiUrl);
+    if (response.status !== 200) {
+      response = await fetch(proxyUrl2 + apiUrl);
+    }
     const data = await response.json();
     // Check if Author field is blank and replace it with 'Unknown'
     if (data.quoteAuthor === '') {
