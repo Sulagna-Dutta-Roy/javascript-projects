@@ -19,6 +19,7 @@ function darkMode() {
   textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)';
   toggleIcon.children[0].textContent = 'Dark Mode';
   toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
+  localStorage.setItem('theme', 'dark');
   imageMode('dark');
 }
 
@@ -28,6 +29,7 @@ function lightMode() {
   textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)';
   toggleIcon.children[0].textContent = 'Light Mode';
   toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
+  localStorage.setItem('theme', 'light');
   imageMode('light');
 }
 
@@ -44,3 +46,14 @@ function switchTheme(event) {
 
 // Event Listener
 toggleSwitch.addEventListener('change', switchTheme);
+
+// Check Local Storage For Theme
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+    darkMode();
+  }
+}
