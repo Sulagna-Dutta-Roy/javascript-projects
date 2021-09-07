@@ -1,23 +1,30 @@
 # JavaScript Projects
 
-* ### [Random Quote Generator](/quote-generator/)
-  Random Quote Generator using the Forismatic API with the ability to share to Twitter. [View Demo](https://tinawebdev.github.io/javascript-projects/quote-generator/).
+* #### [Random Quote Generator](/quote-generator/) | [View Demo](https://tinawebdev.github.io/javascript-projects/quote-generator/)
+  Random Quote Generator using the Forismatic API with the ability to share to Twitter. 
 
-* ### [Unsplash API - Infinite Scroll](/infinite-scroll/)
-  Infinite photo viewer using Unsplash API. If you would like to run this locally, you will need an API key.
+* #### [Unsplash API - Infinite Scroll](/infinite-scroll/)
+  Infinite photo viewer using Unsplash API.
 
-* ### [Joke Teller](/joke-teller/)
-  A Text to Voice-Based Joke Teller app using JavaScript [View Demo](https://tinawebdev.github.io/javascript-projects/joke-teller/).
+* #### [Joke Teller](/joke-teller/) | [View Demo](https://tinawebdev.github.io/javascript-projects/joke-teller/)
+  A Text to Voice-Based Joke Teller app using JavaScript.
 
-* ### [Picture in Picture](/picture-in-picture/)
-  A web application to capture your screen and cast into Picture in Picture Mode [View Demo](https://tinawebdev.github.io/javascript-projects/picture-in-picture/).
+* #### [Picture in Picture](/picture-in-picture/) | [View Demo](https://tinawebdev.github.io/javascript-projects/picture-in-picture/)
+  A web application to capture your screen and cast into Picture in Picture Mode.
 
-* ### [Light/Dark Mode](/light-dark-mode/)
-  A website example that toggles between light and dark mode [View Demo](https://tinawebdev.github.io/javascript-projects/light-dark-mode/).
+* #### [Light/Dark Mode](/light-dark-mode/) | [View Demo](https://tinawebdev.github.io/javascript-projects/light-dark-mode/)
+  A website example that toggles between light and dark mode.
 
-* ### [Animated Navigation](/animated-navigation/)
-  A website example with animated and responsive navigation. [View Demo](https://tinawebdev.github.io/javascript-projects/animated-navigation/).
-  
+* #### [Animated Navigation](/animated-navigation/) | [View Demo](https://tinawebdev.github.io/javascript-projects/animated-navigation/)
+  A website example with animated and responsive navigation.
+
+* #### [Music Player](/music-player/) | [View Demo](https://tinawebdev.github.io/javascript-projects/music-player/)
+  A simple, yet stylish music player with custom controls.
+
+## How to use
+* Open Terminal and change the current working directory to the location where you want the cloned directory to be made.
+* Download the repository using the [instruction](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
