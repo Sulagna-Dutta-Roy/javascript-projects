@@ -11,7 +11,7 @@ You can get your access key on the [Unsplash's Developer Page](https://unsplash.
 
 ### Steps to get this project up and running locally for you
 * Download the repository using the [instruction](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
-* Go to the project folder and open the `script.js` file.
+* Go to the `infinite-scroll` folder and open the `script.js` file.
 * Replace the value of the `config.api_key` variable with your **API key** wrapped in quotes and save.
 * Now you can run the project and see it work!
 
@@ -19,11 +19,3 @@ You can get your access key on the [Unsplash's Developer Page](https://unsplash.
 * Fonts: [Google Fonts](https://fonts.google.com/)
 * Loader: [Loading.io](https://loading.io/)
 * Freely-usable images: [Unsplash API](https://unsplash.com/developers/)
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This package is released under the MIT license.
