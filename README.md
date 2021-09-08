@@ -21,6 +21,9 @@
 * #### [Music Player](/music-player/) | [View Demo](https://tinawebdev.github.io/javascript-projects/music-player/)
   A simple, yet stylish music player with custom controls.
 
+* #### [Custom Countdown](/custom-countdown/) | [View Demo](https://tinawebdev.github.io/javascript-projects/custom-countdown/)
+  A custom countdown app that uses local storage to keep the users data everytime they return to the page.
+
 ## How to use
 * Open Terminal and change the current working directory to the location where you want the cloned directory to be made.
 * Download the repository using the [instruction](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
