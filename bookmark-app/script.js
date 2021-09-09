@@ -16,7 +16,10 @@ function showModal() {
 
 // Modal Event Listeners
 modalShow.addEventListener('click', showModal);
-modalClose.addEventListener('click', () => modal.classList.remove('show-modal'));
+modalClose.addEventListener('click', () => {
+  modal.classList.remove('show-modal');
+  clearAlertMessage();
+});
 window.addEventListener('click', (e) => {
   if (e.target === modal) {
     modal.classList.remove('show-modal');
