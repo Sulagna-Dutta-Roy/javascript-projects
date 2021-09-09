@@ -136,7 +136,7 @@ h3 {
 }
 
 /* Form */
-.bookmark {
+.bookmark-form {
   display: flex;
   flex-direction: column;
 }
