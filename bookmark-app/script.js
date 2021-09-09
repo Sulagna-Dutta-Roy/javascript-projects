@@ -7,6 +7,7 @@ const websiteUrlEl = document.getElementById('website-url');
 const bookmarksContainer = document.getElementById('bookmarks-container');
 const alertDanger = document.getElementById('alert-danger');
 let message = document.getElementById('alert-message');
+let bookmarks = [];
 
 // Show Modal, Focus on Input 
 function showModal() {
@@ -49,11 +50,40 @@ function validate(nameValue, urlValue) {
     alertDanger.classList.add('alert-danger');
     alertDanger.hidden = false;
     bookmarkForm[0].style.borderColor = "coral";
-    validateUrl(urlValue);
+    validateUrl(urlValue)
     return false;
   }
-  validateUrl(urlValue);
+  if (!validateUrl(urlValue)) {
+    return false;
+  }
+  // Valid
   return true;
+}
+
+// Fetch Bookmarks
+function fetchBookmarks() {
+  // Get bookmarks from localStorage if available
+  if (localStorage.getItem('bookmarks')) {
+    bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+  } else {
+    // Create bookmarks array in localStorage
+    bookmarks = [
+      {
+        name: 'yahoo',
+        url: 'https://yahoo.com/'
+      },
+      {
+        name: 'google',
+        url: 'https://google.com/'
+      },
+      {
+        name: 'youtube',
+        url: 'https://youtube.com/'
+      }
+    ];
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+  }
+
 }
 
 // Clear Alert Message
@@ -75,10 +105,8 @@ window.addEventListener('click', (e) => {
 // Handle Data from Form
 function storeBookmark(e) {
   e.preventDefault();
+  clearAlertMessage();
   const nameValue = websiteNameEl.value;
-  message.textContent = '';
-  alertDanger.classList.remove('alert-danger');
-  alertDanger.hidden = true;
   let urlValue = websiteUrlEl.value;
   if (!urlValue.includes('https://', 'http://')) {
     urlValue = `https://${urlValue}`;
@@ -86,7 +114,19 @@ function storeBookmark(e) {
   if (!validate(nameValue, urlValue)) {
     return false;
   }
+  const bookmark = {
+    name: nameValue,
+    url: urlValue,
+  };
+  bookmarks.push(bookmark);
+  localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+  fetchBookmarks(bookmarks);
+  bookmarkForm.reset();
+  websiteNameEl.focus();
 }
 
 // Event Listener
 bookmarkForm.addEventListener('submit', storeBookmark);
+
+// On Load, Fetch Bookmarks
+fetchBookmarks();
