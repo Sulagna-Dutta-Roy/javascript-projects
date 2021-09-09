@@ -1,5 +1,7 @@
 :root {
   --primary-color: rgba(46, 41, 87, 1);
+  --secondary-color: rgb(69, 64, 109);
+  --blue-bell-color: rgb(149, 141, 214);
   --border-radius: 3px;
 }
 
@@ -16,7 +18,7 @@ body {
 }
 
 .link {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   color: whitesmoke;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -26,7 +28,7 @@ body {
 }
 
 .link:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 h1 {
@@ -132,45 +134,75 @@ h3 {
 
 .modal-content {
   padding: 20px;
-  background-color: whitesmoke;
+  background-color: rgba(23, 20, 43, 0.8);
 }
 
 /* Form */
 .bookmark-form {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 .form-group {
   height: 55px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .form-input {
-  width: 97%;
-  padding: 5px;
-  border: 1px solid var(--primary-color);
+  width: 94%;
+  padding: 6px 12px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: var(--border-radius);
   display: block;
   outline: none;
+  background-color: var(--primary-color);
+  font-family:'Courier New', Courier, monospace;
+  color: whitesmoke;
+  font-size: 16px;
+  transition: all 0.3s ease-in 0s;
+}
+
+input:focus {
+  border-color: var(--blue-bell-color);
+  background-color: var(--secondary-color);
 }
 
 .form-label {
-  color: var(--primary-color);
+  color: var(--blue-bell-color);
   padding: 5px 0;
   display: block;
+  font-weight: 800;
+}
+
+.alert-danger {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);;
+  background-color: coral;
+  padding: 5px 20px;
+  font-weight: bold;
+  animation: modalopen 1s;
+}
+
+.alert-danger i {
+  padding-right: 25px;
+  font-size: 25px;
+  color:var(--primary-color);
 }
 
 button {
   cursor: pointer;
-  color: white;
-  background: var(--primary-color);
+  color: whitesmoke;
+  background-color: var(--primary-color);
   border: none;
   border-radius: var(--border-radius);
   height: 30px;
   width: 100px;
   margin-top: 10px;
   align-self: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 button:hover {
