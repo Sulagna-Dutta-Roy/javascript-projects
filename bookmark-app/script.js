@@ -62,6 +62,8 @@ function validate(nameValue, urlValue) {
 
 // Build Bookmarks DOM
 function buildBookmarks() {
+  // Remove all bookmark elements
+  bookmarksContainer.textContent = '';
   // Build items
   bookmarks.forEach((bookmark) => {
     const {name, url} = bookmark;
@@ -140,19 +142,23 @@ function storeBookmark(e) {
   clearAlertMessage();
   const nameValue = websiteNameEl.value;
   let urlValue = websiteUrlEl.value;
+  // Add 'https://' if not there
   if (!urlValue.includes('https://', 'http://')) {
     urlValue = `https://${urlValue}`;
   }
+  // Validate
   if (!validate(nameValue, urlValue)) {
     return false;
   }
+  // Set bookmark object, add to array
   const bookmark = {
     name: nameValue,
     url: urlValue,
   };
   bookmarks.push(bookmark);
+  // Set bookmarks in localStorage, fetch, reset input fields
   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-  fetchBookmarks(bookmarks);
+  fetchBookmarks();
   bookmarkForm.reset();
   websiteNameEl.focus();
 }
