@@ -19,21 +19,45 @@
         <img src="https://www.google.com/s2/u/0/favicons?domain=yahoo.com" alt="Favicon">
         <a href="https://yahoo.com/" target="_blank">yahoo</a>
       </div>
-      <i class="fas fa-times" id="delete-bookmark" title="Delete Bookmark"></i>
+      <i class="fas fa-times delete-icon" id="delete-bookmark" title="Delete Bookmark"></i>
     </div>
     <div class="item link">
       <div class="name">
         <img src="https://www.google.com/s2/u/0/favicons?domain=google.com" alt="Favicon">
         <a href="https://google.com/" target="_blank">google</a>
       </div>
-      <i class="fas fa-times" id="delete-bookmark" title="Delete Bookmark"></i>
+      <i class="fas fa-times delete-icon" id="delete-bookmark" title="Delete Bookmark"></i>
     </div>
     <div class="item link">
       <div class="name">
         <img src="https://www.google.com/s2/u/0/favicons?domain=youtube.com" alt="Favicon">
         <a href="https://youtube.com/" target="_blank">youtube</a>
       </div>
-      <i class="fas fa-times" id="delete-bookmark" title="Delete Bookmark"></i>
+      <i class="fas fa-times delete-icon" id="delete-bookmark" title="Delete Bookmark"></i>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal-container show-modal" id="modal">
+    <div class="modal">
+      <i class="fas fa-times close-icon" id="close-modal"></i>
+      <div class="modal-header">
+        <h3>Add Bookmark</h3>
+      </div>
+      <div class="modal-content">
+        <form class="bookmark" id="bookmark">
+          <!-- Website Name -->
+          <div class="form-group">
+            <label for="website-name" class="form-label">Website Name</label>
+            <input type="text" class="form-input" id="website-name">
+          </div>
+          <!-- Website URL -->
+          <div class="form-group">
+            <label for="website-url" class="form-label">Website Url</label>
+            <input type="text" class="form-input" id="website-url">
+          </div>
+          <button type="submit">Save</button>
+        </form>
+      </div>
     </div>
   </div>
   <!-- Script -->
